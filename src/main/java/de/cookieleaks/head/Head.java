@@ -13,8 +13,11 @@ public final class Head extends JavaPlugin {
     }
     @Override
     public void onEnable() {
+        synchronized (this) {
+            instance = this;
+        }
         CommandMap commandMap = Bukkit.getCommandMap();
-        commandMap.register("head", new HeadCommand());
+        commandMap.register("skull", new HeadCommand());
     }
 
     @Override

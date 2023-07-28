@@ -15,7 +15,7 @@ import java.util.UUID;
 public class HeadCommand extends BukkitCommand {
 
     protected HeadCommand() {
-        super("head");
+        super("skull");
     }
 
     static HashMap<UUID, Long> cooldowns = new HashMap<>();
