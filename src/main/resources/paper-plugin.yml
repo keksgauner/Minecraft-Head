@@ -1,0 +1,4 @@
+name: Head
+version: '${project.version}'
+main: de.cookieleaks.head.Head
+api-version: '1.19'
