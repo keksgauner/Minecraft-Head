@@ -1,4 +1,4 @@
-name: Head
+name: Skull
 version: '${project.version}'
-main: de.cookieleaks.head.Head
+main: de.cookieleaks.skull.Skull
 api-version: '1.19'

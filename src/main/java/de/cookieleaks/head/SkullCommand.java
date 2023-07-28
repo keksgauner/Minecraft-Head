@@ -12,9 +12,9 @@ import org.jetbrains.annotations.NotNull;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class HeadCommand extends BukkitCommand {
+public class SkullCommand extends BukkitCommand {
 
-    protected HeadCommand() {
+    protected SkullCommand() {
         super("skull");
     }
 
@@ -49,7 +49,7 @@ public class HeadCommand extends BukkitCommand {
             public void run() {
                 cooldowns.remove(player);
             }
-        }.runTaskLater(Head.getInstance(), 20 * 86400);
+        }.runTaskLater(Skull.getInstance(), 20 * 86400);
     }
 
 
