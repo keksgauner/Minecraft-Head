@@ -1,4 +1,4 @@
-package de.cookieleaks.head;
+package de.cookieleaks.skull;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandMap;
