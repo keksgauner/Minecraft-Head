@@ -24,7 +24,7 @@ public class SkullCommand extends BukkitCommand {
     public boolean execute(@NotNull CommandSender sender, @NotNull String label, @NotNull String[] strings) {
         if (sender instanceof Player player) {
             if (cooldowns.containsKey(player.getUniqueId())) {
-                long secondsLeft = ((cooldowns.get(player) / 1000) + 86400) - (System.currentTimeMillis() / 1000);
+                long secondsLeft = ((cooldowns.get(player.getUniqueId()) / 1000) + 86400) - (System.currentTimeMillis() / 1000);
                 player.sendMessage("§cDu kannst deinen Kopf erst in " + secondsLeft + " Sekunden wieder erhalten!");
                 return false;
             }
@@ -47,7 +47,7 @@ public class SkullCommand extends BukkitCommand {
         new BukkitRunnable() {
             @Override
             public void run() {
-                cooldowns.remove(player);
+                cooldowns.remove(player.getUniqueId());
             }
         }.runTaskLater(Skull.getInstance(), 20 * 86400);
     }
